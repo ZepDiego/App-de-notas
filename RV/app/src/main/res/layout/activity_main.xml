@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#87CEEB"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="275dp">
+
+
+        <EditText
+            android:id="@+id/ettitulo"
+            android:layout_width="370dp"
+            android:layout_height="53dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="center"
+            android:hint=" Titulo"
+            android:textColorHint="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/etmensaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+        <EditText
+            android:id="@+id/etmensaje"
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="24dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint=" Mensaje..."
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btnguardar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+
+        <Button
+            android:id="@+id/btnguardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Aceptar"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorHint="#FF0000"
+            android:textColorLink="#FA0202"
+            android:textCursorDrawable="@android:drawable/checkbox_on_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvtareas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>
